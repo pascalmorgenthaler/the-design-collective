@@ -10,9 +10,7 @@ layout: default
     </div>
 </section> 
 
-<section class="padded-2 bg-dark center light-text"> 
-    <p> Sign up to our newsletter to access free design resources. -> </p>
-</section>
+{% include newsletter-signup.html %}
 
 <!-- Icon Grid  -->
 <section class="padded grid center icon-section">
@@ -89,9 +87,9 @@ layout: default
 <section class="bg-rust padded projects">
     <h2 class="center"> Recent Projects </h2>
 
-    {% for project in site.projects %}
+    {% for project in site.projects limit: 2 %}
 
-    <div class="grid">
+    <div class="grid flex-flip-alternate">
         
         <div class="col-5_sm-12-middle padded">
             <h3> {{ project.title }} </h3>
